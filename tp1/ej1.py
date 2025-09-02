@@ -15,10 +15,10 @@ def informar_el_mayor(a: int, b: int, c:int ) -> None:
 
         return mayor
     
-    return -1
+    return -1 
 
     
-
+# Bloque principal
 print(informar_el_mayor(3, 7, 1))
 print(informar_el_mayor(5, 5, 2)) 
 print(informar_el_mayor(4, 4, 4))
