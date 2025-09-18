@@ -86,7 +86,7 @@ def calcular_camiones_necesarios(n) -> str:
 
     else:
 
-        return "El camión no cumple con la cantidad mínima para ser despachado."
+        return "El camion no cumple con la cantidad mínima para ser despachado."
 
 
 # Bloque principal
