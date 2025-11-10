@@ -30,27 +30,62 @@ def diadelasemana(dia: int, mes: int, anio: int) -> int:
 
     return dia_semana
 
-def imprimir_calendario(mes, n) -> list[int]:
+def imprimir_calendario(mes, anio) -> list[int]:
 
     calendario = []
-
     dias_por_mes = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    
 
-    for i, x in enumerate(dias_por_mes):
+    if (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0):
 
-        if mes == i + 1:
+        dias_por_mes[1] = 29
+    
 
-            cant_dias_calendario = x * ()
+    primer_dia = diadelasemana(1, mes, anio)
+    
 
-            calendario
+    for i in range(primer_dia):
 
-        if n > 
+        calendario.append(0)
+    
 
-        print(x)
-        print(len(dias_por_mes))
+    for dia in range(1, dias_por_mes[mes-1] + 1):
+
+        calendario.append(dia)
+    
+    return calendario
+
+def mostrar_calendario(mes, anio):
+
+    dias_semana = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"]
+    lista_calendario = imprimir_calendario(mes, anio)
+    
+    print(f"\nCalendario para {mes}/{anio}")
+
+    for dia in dias_semana:
+
+        print(f"{dia:4}", end="")
+
+    print()
+    
+
+    contador = 0
+    for dia in lista_calendario:
+
+        if dia == 0:
+
+            print("    ", end="")
+
+        else:
+
+            print(f"{dia:4}", end="")
         
+        contador += 1
+
+        if contador % 7 == 0:
+
+            print()
+
 # Bloque principal
-
-
-
 print(diadelasemana(12, 12, 2005))
+mostrar_calendario(12, 2005)

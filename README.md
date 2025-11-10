@@ -23,6 +23,7 @@ Recordatorios:
     TP-1:
 
         Ej 5: Funciones lambda
-
-        Ej 7
     
+    TP-2:
+
+      Ej 11: NO SE QUE HACER AYUDA
